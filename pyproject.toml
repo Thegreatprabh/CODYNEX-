@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codynex-engine"
+version = "0.2.0"
+description = "CODYNEX Engine — codebase intelligence: blast-radius prediction, impact analysis, dependency graphs, sandbox-verified changes. Stdlib-only Python, MCP-ready."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Prabhjot Singh" }]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+dna = "dna.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["dna*"]
